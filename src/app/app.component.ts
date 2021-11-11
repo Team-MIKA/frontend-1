@@ -64,7 +64,7 @@ export class AppComponent {
 
 
     constructor(eastereggService: EastereggService, public dialog: MatDialog) {
-        eastereggService.t.subscribe(() => {
+        eastereggService.subject1.subscribe(() => {
             this.dialog.open(CongratulationsDialogComponent);
         })
     }
