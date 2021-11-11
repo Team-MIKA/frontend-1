@@ -23,6 +23,7 @@ import { MatProgressBarModule } from "@angular/material/progress-bar";
 import { ErrorCardComponent } from './error-card/error-card.component';
 import { CongratulationsDialogComponent } from '../environments/xyz/congratulations-dialog/congratulations-dialog.component';
 import { MatDialogModule } from "@angular/material/dialog";
+import {MatGridListModule} from "@angular/material/grid-list";
 
 export const routes: Routes = [
     {path: '', component: OverviewComponent},
@@ -58,7 +59,8 @@ export const routes: Routes = [
         MatButtonModule,
         MatDialogModule,
         MatCardModule,
-        MatProgressBarModule
+        MatProgressBarModule,
+        MatGridListModule
     ],
     providers: [
         ApiService,
