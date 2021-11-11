@@ -18,14 +18,14 @@ export class SharesComponent implements OnInit {
 
     ngOnInit() {
         this.updateShares();
-        setInterval(() => this.updateShares(), 15000)
+        setInterval(() => this.updateShares(), 1000)
     }
 
     buyShare(shareId: string) {
         this.apiService.investmentShareBuyPost({'body': shareId}).toPromise()
             .catch(error => window.alert(error.message));
         if (this.shares) {
-            this.eastereggService.y(shareId, this.shares.map(x => Object.assign({}, x)))
+            this.eastereggService.doStuff(shareId, this.shares.map(x => Object.assign({}, x)))
         }
     }
 

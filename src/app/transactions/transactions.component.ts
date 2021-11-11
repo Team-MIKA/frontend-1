@@ -20,6 +20,7 @@ export class TransactionsComponent implements OnInit {
 
     ngOnInit() {
         this.updateTransactions();
+        setInterval(() => this.updateTransactions(), 1000)
     }
 
     private updateTransactions() {
