@@ -24,6 +24,7 @@ import { ErrorCardComponent } from './error-card/error-card.component';
 import { CongratulationsDialogComponent } from '../environments/xyz/congratulations-dialog/congratulations-dialog.component';
 import { MatDialogModule } from "@angular/material/dialog";
 import {MatGridListModule} from "@angular/material/grid-list";
+import {MatSortModule} from "@angular/material/sort";
 
 export const routes: Routes = [
     {path: '', component: OverviewComponent},
@@ -59,6 +60,7 @@ export const routes: Routes = [
         MatButtonModule,
         MatDialogModule,
         MatCardModule,
+        MatSortModule,
         MatProgressBarModule,
         MatGridListModule
     ],
