@@ -25,6 +25,8 @@ import { CongratulationsDialogComponent } from '../environments/xyz/congratulati
 import { MatDialogModule } from "@angular/material/dialog";
 import {MatGridListModule} from "@angular/material/grid-list";
 import {MatSortModule} from "@angular/material/sort";
+import { ConsumptionChartComponent } from './consumption-chart/consumption-chart.component';
+import {NgxChartsModule} from "@swimlane/ngx-charts";
 
 export const routes: Routes = [
     {path: '', component: OverviewComponent},
@@ -40,30 +42,32 @@ export const routes: Routes = [
         SharesComponent,
         OwnedSharesComponent,
         ErrorCardComponent,
-        CongratulationsDialogComponent
+        CongratulationsDialogComponent,
+        ConsumptionChartComponent
     ],
-    imports: [
-        BrowserModule,
-        BrowserAnimationsModule,
-        HttpClientModule,
-        FormsModule,
-        RouterModule.forRoot(
-            routes
-        ),
-        ApiModule.forRoot(
-            {rootUrl: 'http://localhost:8080'}
-        ),
-        MatTableModule,
-        MatFormFieldModule,
-        MatInputModule,
-        MatIconModule,
-        MatButtonModule,
-        MatDialogModule,
-        MatCardModule,
-        MatSortModule,
-        MatProgressBarModule,
-        MatGridListModule
-    ],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+    FormsModule,
+    RouterModule.forRoot(
+      routes
+    ),
+    ApiModule.forRoot(
+      {rootUrl: 'http://localhost:8080'}
+    ),
+    MatTableModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatIconModule,
+    MatButtonModule,
+    MatDialogModule,
+    MatSortModule,
+    MatCardModule,
+    MatProgressBarModule,
+    MatGridListModule,
+    NgxChartsModule
+  ],
     providers: [
         ApiService,
     ],
