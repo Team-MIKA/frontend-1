@@ -24,6 +24,7 @@ import { ErrorCardComponent } from './error-card/error-card.component';
 import { CongratulationsDialogComponent } from '../environments/xyz/congratulations-dialog/congratulations-dialog.component';
 import { MatDialogModule } from "@angular/material/dialog";
 import {MatGridListModule} from "@angular/material/grid-list";
+import {MatSortModule} from "@angular/material/sort";
 import { ConsumptionChartComponent } from './consumption-chart/consumption-chart.component';
 import {NgxChartsModule} from "@swimlane/ngx-charts";
 
@@ -61,6 +62,7 @@ export const routes: Routes = [
     MatIconModule,
     MatButtonModule,
     MatDialogModule,
+    MatSortModule,
     MatCardModule,
     MatProgressBarModule,
     MatGridListModule,
