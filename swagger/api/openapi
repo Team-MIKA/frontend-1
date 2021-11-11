@@ -72,6 +72,27 @@ paths:
       responses:
         "200":
           description: OK
+  /transaction/fetchByCategory/{category}:
+    get:
+      parameters:
+      - name: category
+        in: path
+        required: true
+        schema:
+          $ref: '#/components/schemas/TransactionCategory'
+      - name: accountId
+        in: header
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Transaction'
   /transaction/{accountId}:
     get:
       parameters:
@@ -159,6 +180,7 @@ components:
       - FOOD
       - INVESTMENT
       - OTHER
+      - PAYCHECK
       - SHOPPING
       type: string
     UUID:
